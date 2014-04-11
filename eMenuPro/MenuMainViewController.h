@@ -20,8 +20,8 @@
 #import "ZBarSDK.h"
 #import "JSBadgeView.h"
 #import "MarqueeLabel.h"
-#import "BigImageViewController.h"
 #import "BarcodeViewController.h"
+#import "BigImageViewController.h"
 
 @class LoginViewController;
 @class EmployeeViewController;
@@ -63,16 +63,20 @@
 //总页数
 @property (nonatomic) int pageTotalNum;
 @property (nonatomic) int thisPage;
-@property (nonatomic) int pageLargeImageTotalNum;
+
 //每页视图
 @property (nonatomic, retain) NSMutableArray *viewControllers;
-@property (nonatomic, retain) NSMutableArray *largeImageViewControllers;
-@property (nonatomic,retain) UIScrollView *menuLargeImageScrollView;
+
 //滚动视图
 @property (nonatomic,retain) IBOutlet UIScrollView *menuScrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl *menuPageControl;
 @property (nonatomic,retain) IBOutlet UILabel *shopAdvert;
 @property (nonatomic,retain) MarqueeLabel *myshopAdvert;
+//小图放大图滚动
+@property (nonatomic, retain) NSMutableArray *largeImageViewControllers;
+@property (nonatomic,retain) UIScrollView *menuLargeImageScrollView;
+@property (nonatomic) int pageLargeImageTotalNum;
+
 //搜索栏
 @property (nonatomic,retain) IBOutlet UITextField *searchBar;
 -(IBAction)searchBarAction:(id)sender;

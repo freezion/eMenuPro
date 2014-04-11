@@ -348,6 +348,23 @@
             </objects>
             <point key="canvasLocation" x="1750" y="-159"/>
         </scene>
+        <!--Big Image View Controller-->
+        <scene sceneID="RQR-MN-3HU">
+            <objects>
+                <viewController storyboardIdentifier="BigImageViewController" id="TqL-Fj-An5" customClass="BigImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="joB-MT-VMo">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9d-DU-O1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="561"/>
+        </scene>
         <!--Add Shop Car View Controller-->
         <scene sceneID="01A-cR-rkP">
             <objects>
@@ -746,31 +763,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTO-Fz-KWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="-159"/>
-        </scene>
-        <!--Big Image View Controller-->
-        <scene sceneID="grR-Uh-9Qr">
-            <objects>
-                <viewController storyboardIdentifier="BigImageViewController" id="ADT-mB-ZIb" customClass="BigImageViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TWX-sk-Fgg">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tuh-ee-7JW">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="menuLargeImageScrollView" destination="tuh-ee-7JW" id="NtA-9f-jtf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hGu-dJ-uxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="664" y="585"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="XoW-Qf-GCd">

@@ -13,14 +13,12 @@
 @end
 
 @implementation BigImageViewController
-@synthesize pageList;
 @synthesize partflag;
 @synthesize back;
 @synthesize updownImage;
 @synthesize dishNum;
 @synthesize dishInfo;
 @synthesize dishID;
-@synthesize page;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,19 +34,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view setFrame:CGRectMake(0, 0, 1024, 768)];
     [self showLargeImage];
 }
 
 - (void) showLargeImage{
     
-    DishInfo *mydishInfo =[pageList objectAtIndex:0];
+    DishInfo *mydishInfo =dishInfo;
     ShopCar *selectShopCar=[[ShopCar alloc]init];
     if ([mydishInfo.dishPrice isEqualToString:@""]||[mydishInfo.dishPrice isEqualToString:@"0"]){
         selectShopCar=[ShopCar selectWithPrice:mydishInfo.dishID withPrice:mydishInfo.smallDishPrice];
     }else{
         selectShopCar=[ShopCar selectWithPrice:mydishInfo.dishID withPrice:mydishInfo.dishPrice];
     }
-    //UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDarkView:)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDarkView)];
     UITapGestureRecognizer *noAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissView:)];
     UIImage *img;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
@@ -336,7 +335,12 @@
     memo.scrollEnabled=YES;
     memo.text=mydishInfo.dishMemo;
     memo.editable=NO;
-    
+    if ([mydishInfo.stock intValue]==0){
+        UIImageView *soldOutImg=[[UIImageView alloc]initWithFrame:CGRectMake(620, 300, 340, 340)];
+        [soldOutImg setImage:[UIImage imageNamed:@"soldOutImgHot"]];
+        [imageView addSubview:soldOutImg];
+    }
+
     //将dishIdLab标签添加进入了darkView层
     [darkView addSubview:dishIdLab];
     [darkView addSubview:dishNameLab];
@@ -346,7 +350,7 @@
     [darkView addSubview:memo];
     [darkView addGestureRecognizer:noAction];
     [imageView addSubview:darkView];
-    //[imageView addGestureRecognizer:tapGesture];
+    [imageView addGestureRecognizer:tapGesture];
     [self.view addSubview:imageView];
     
 }
@@ -920,7 +924,9 @@
     [dishPart3 setTitleColor:[UIColor colorWithRed:233/255.0 green:80/255.0 blue:20/255.0 alpha:1]
                     forState:UIControlStateNormal];
 }
-
+- (void)dismissDarkView {
+    [self.delegate dismissDarkView];
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -12,21 +12,18 @@
 
 @protocol BigImageViewControllerDelegate <NSObject>
 - (void) setBadge;
+- (void)dismissDarkView;
 @end
 
 @interface BigImageViewController : UIViewController
 
 @property (nonatomic, retain) id<BigImageViewControllerDelegate> delegate;
-@property (nonatomic, retain) NSArray *pageList;
 @property (nonatomic, retain) UIView *back;
 @property (nonatomic) int partflag;
-@property (nonatomic) NSUInteger page;
 @property (nonatomic, retain) UIImageView *updownImage;
 @property (nonatomic, retain) UITextView *memo;
 @property (nonatomic, retain) UITextField *dishNum;
 @property (nonatomic,retain) DishInfo *dishInfo;
 @property (nonatomic,retain) NSString *dishID;
-
-@property (nonatomic,retain) IBOutlet UIScrollView *menuLargeImageScrollView;
 
 @end

@@ -58,7 +58,7 @@
 		3D051DC418C85D79007F6BCD /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D051DC018C85D79007F6BCD /* minus.png */; };
 		3D051DC518C85D79007F6BCD /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D051DC118C85D79007F6BCD /* plus.png */; };
 		3D051DC718C86ED0007F6BCD /* menuBarG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D051DC618C86ED0007F6BCD /* menuBarG.png */; };
-		3D053FE518F514A100787CC0 /* BigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D053FE418F514A100787CC0 /* BigImageViewController.m */; };
+		3D087F8F18F7DD420059861E /* BigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D087F8E18F7DD420059861E /* BigImageViewController.m */; };
 		3D10081E18E4169B00558602 /* chili1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D10081B18E4169B00558602 /* chili1.png */; };
 		3D10081F18E4169B00558602 /* chili2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D10081C18E4169B00558602 /* chili2.png */; };
 		3D10082018E4169B00558602 /* chili3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D10081D18E4169B00558602 /* chili3.png */; };
@@ -219,8 +219,8 @@
 		3D051DC018C85D79007F6BCD /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 		3D051DC118C85D79007F6BCD /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		3D051DC618C86ED0007F6BCD /* menuBarG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBarG.png; sourceTree = "<group>"; };
-		3D053FE318F514A100787CC0 /* BigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageViewController.h; sourceTree = "<group>"; };
-		3D053FE418F514A100787CC0 /* BigImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImageViewController.m; sourceTree = "<group>"; };
+		3D087F8D18F7DD420059861E /* BigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigImageViewController.h; sourceTree = "<group>"; };
+		3D087F8E18F7DD420059861E /* BigImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigImageViewController.m; sourceTree = "<group>"; };
 		3D10081B18E4169B00558602 /* chili1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chili1.png; sourceTree = "<group>"; };
 		3D10081C18E4169B00558602 /* chili2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chili2.png; sourceTree = "<group>"; };
 		3D10081D18E4169B00558602 /* chili3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chili3.png; sourceTree = "<group>"; };
@@ -462,10 +462,10 @@
 				3D1AD44418D14D9E0033BD58 /* EmployeeViewController.m */,
 				3D1AD44518D14D9E0033BD58 /* MenuMainViewController.h */,
 				3D1AD44618D14D9E0033BD58 /* MenuMainViewController.m */,
+				3D087F8D18F7DD420059861E /* BigImageViewController.h */,
+				3D087F8E18F7DD420059861E /* BigImageViewController.m */,
 				3D1AD44718D14D9E0033BD58 /* MenuListViewController.h */,
 				3D1AD44818D14D9E0033BD58 /* MenuListViewController.m */,
-				3D053FE318F514A100787CC0 /* BigImageViewController.h */,
-				3D053FE418F514A100787CC0 /* BigImageViewController.m */,
 				3D1AD44918D14D9E0033BD58 /* ShopCarViewController.h */,
 				3D1AD44A18D14D9E0033BD58 /* ShopCarViewController.m */,
 				3D1AD43B18D14D680033BD58 /* HistoryViewController.h */,
@@ -917,7 +917,7 @@
 				3DC5C02518E1280500B14704 /* JSBadgeView.m in Sources */,
 				3D1AD45018D14D9E0033BD58 /* ShopCarViewController.m in Sources */,
 				3D1AD44C18D14D9E0033BD58 /* SyncViewController.m in Sources */,
-				3D053FE518F514A100787CC0 /* BigImageViewController.m in Sources */,
+				3D087F8F18F7DD420059861E /* BigImageViewController.m in Sources */,
 				3307155A18A62ABD0069F8E5 /* AFHTTPSessionManager.m in Sources */,
 				3D25398D18C089DA00012A3B /* OrderDishes.m in Sources */,
 				3D116AFB18D7D4C000941EE2 /* myAlert.m in Sources */,
