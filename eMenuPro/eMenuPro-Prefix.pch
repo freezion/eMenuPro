@@ -1,0 +1,23 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import "AFNetworking.h"
+#define WEBSERVICE_ADDRESS @"http://115.28.254.195:8080/dishMenu/"
+//#define WEBSERVICE_ADDRESS @"http://10.1.2.221:8080/dishMenu/"
+#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue] >= 7
+#endif

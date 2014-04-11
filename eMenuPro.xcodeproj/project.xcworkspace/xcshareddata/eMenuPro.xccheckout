@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>46923BA9-8D6C-403D-B224-5BC2F2EE4173</string>
+	<key>IDESourceControlProjectName</key>
+	<string>eMenuPro</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CD083B77-1317-48EE-B352-F18861FB9C43</key>
+		<string>https://github.com/freezion/eMenuPro.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>eMenuPro.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CD083B77-1317-48EE-B352-F18861FB9C43</key>
+		<string>../../../../Desktop/eMenuPro</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/freezion/eMenuPro.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CD083B77-1317-48EE-B352-F18861FB9C43</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD083B77-1317-48EE-B352-F18861FB9C43</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eMenuPro</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD083B77-1317-48EE-B352-F18861FB9C43</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eMenuPro</string>
+		</dict>
+	</array>
+</dict>
+</plist>
