@@ -50,6 +50,11 @@
 
 
 -(IBAction)loginButton:(id)sender{
+    if ([userName.text isEqualToString:@""] || userName.text==nil || [passWord.text isEqualToString:@""] || passWord.text==nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名或密码没有输入" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view.superview addSubview:HUD];
     [self.view bringSubviewToFront:HUD];

@@ -144,7 +144,7 @@
     const char *dbpath=[databasePath UTF8String];
     if (sqlite3_open(dbpath, &eMenuProDB)==SQLITE_OK){
         char *errMsg;
-        const char *sql_stmt ="CREATE TABLE IF NOT EXISTS DISHIMAGE(IMAGEID VARCHAR(20), DISHID VARCHAR(20) PRIMARY KEY, IMAGENAME VARCHAR(50));";
+        const char *sql_stmt ="CREATE TABLE IF NOT EXISTS DISHIMAGE(IMAGEID INTEGER PRIMARY KEY AUTOINCREMENT, DISHID VARCHAR(20), IMAGENAME VARCHAR(50));";
         if (sqlite3_exec(eMenuProDB, sql_stmt, NULL, NULL, &errMsg)!=SQLITE_OK)
         {
             NSLog(@"create failed!\n");
@@ -160,6 +160,7 @@
     NSArray *imageArr=[DishImage selectAllImageName];
     NSFileManager *fm=[NSFileManager defaultManager];
     for (NSString *imageName in imageArr){
+        if (![imageName isEqualToString:@""]){
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
         /*写入图片*/
         //帮文件起个全路径名字
@@ -173,8 +174,9 @@
         [uniquePath1 appendString:@"/Sml"];
         [uniquePath1 appendString:imageName];
         [fm removeItemAtPath:uniquePath1 error:nil];
+        }
     }
-    
+
     NSString *databasePath = [self getDBPath];
     sqlite3 *eMenuProDB;
     const char *dbpath = [databasePath UTF8String];
@@ -185,7 +187,8 @@
         if (sqlite3_exec(eMenuProDB, sql_stmt, NULL, NULL, &errMsg)!=SQLITE_OK) {
             NSLog(@"delete failed!\n");
         }else{
-            NSLog(@"delete success!\n");}
+            NSLog(@"delete success!\n");
+        }
     }
     else
     {

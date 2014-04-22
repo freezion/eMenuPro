@@ -25,12 +25,12 @@
     sqlite3_stmt *statement;
     if (sqlite3_open(dbpath, &eMenuDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT IMAGENAME FROM DISHIMAGE;"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DISHIMAGE;"];
         const char *query_stmt = [querySQL UTF8String];
         if (sqlite3_prepare_v2(eMenuDB, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
             while (sqlite3_step(statement) == SQLITE_ROW)
             {
-                NSString *imageName=[[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
+                NSString *imageName=[[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
                 [arr addObject:imageName];
             }
             sqlite3_finalize(statement);

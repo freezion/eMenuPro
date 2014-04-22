@@ -408,7 +408,7 @@
 -(void) okButtonAction{
     [self dismissAlert:nil];
     self.tableNo = self.txtTableNo.text;
-    if ([self.tableNo isEqualToString:@""]) {
+    if ([self.tableNo isEqualToString:@""] || self.tableNo==nil) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"未输入桌号" delegate:self cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
         [alert show];
     } else {
@@ -1554,7 +1554,8 @@
                            [SystemUtil deleteWaterMenuTable];
                            [SystemUtil deleteEmployeeTable];
                            [SystemUtil deleteShopCarTable];
-                           
+
+
                            [SystemUtil createBusinessInfoTable];
                            [SystemUtil createDishTypeTable];
                            [SystemUtil createDishInfoTable];
@@ -1826,9 +1827,11 @@
     }
     
     
-    NSString *searchData = self.searchBar.text;
-    if (searchData==nil){
+    NSString *searchData = @"";
+    if (self.searchBar.text==nil || [self.searchBar.text isEqualToString:@""]){
         searchData=@"";
+    }else{
+        searchData=self.searchBar.text;
     }
     //隐藏键盘
     [self.searchBar resignFirstResponder];

@@ -177,11 +177,18 @@
                                dishInfo.stock=[inner objectForKey:@"dishCount"];
                                //dishInfo.imageID=[inner objectForKey:@"imageId"];
                                dishInfo.imageID=@"";
+                               
+                               
                                dishInfo.imageName=[inner objectForKey:@"imageUrl"];
                                NSArray *imgname=[dishInfo.imageName componentsSeparatedByString:@"/"];
                                dishInfo.imageName=[imgname lastObject];
+                               
+                               NSLog(@"%@", dishInfo.dishName);
+                               NSLog(@"%@", dishInfo.imageName);
+                               
                                //调用插入Sqlite
                                int flag=[DishInfo insert:dishInfo];
+                               
                                if (flag==1){
                                    NSLog(@"菜品插入成功！");
                                    //取得网上图片

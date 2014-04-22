@@ -78,10 +78,10 @@
     const char *dbPath=[dataBasePath UTF8String];
     sqlite3_stmt *statement;
     if(sqlite3_open(dbPath, &eMenuDB)==SQLITE_OK){
-        NSString *insertSQL =[NSString stringWithFormat:@"INSERT INTO DISHIMAGE VALUES(\"%@\",\"%@\",\"%@\");",
-                              dish.imageID,
+        NSString *insertSQL =[NSString stringWithFormat:@"INSERT INTO DISHIMAGE VALUES(NULL,\"%@\",\"%@\");",
                               dish.dishID,
                               dish.imageName];
+        NSLog(@"%@", insertSQL);
         const char *insert_stmt=[insertSQL UTF8String];
         sqlite3_prepare_v2(eMenuDB, insert_stmt, -1, &statement, NULL);
         if (sqlite3_step(statement)==SQLITE_DONE){

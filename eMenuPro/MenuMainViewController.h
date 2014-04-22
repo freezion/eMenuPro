@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "DishType.h"
 #import "DishInfo.h"
+#import "DishImage.h"
 #import "MenuListViewController.h"
 #import "ShopCarViewController.h"
 #import "SetUpViewController.h"

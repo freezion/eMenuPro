@@ -879,6 +879,11 @@
         shopCar=[ShopCar selectWithPrice:dishInfo.dishID withPrice:dishInfo.bigDishPrice];
         shopCar.dishPrice= dishInfo.bigDishPrice;
     }
+    if ([dishInfo.stock isEqualToString:@"0"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"该菜品已售完！" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     [ShopCar delete:shopCar.systemID];
     if ([hotdishNum.text isEqualToString:@""]  || hotdishNum.text == nil){
         hotdishNum.text=@"1";
@@ -1035,6 +1040,11 @@
     UIImageView *imageView;
     DishInfo *dishInfo =[pageList objectAtIndex:num];
     ShopCar *shopCar;
+    if ([dishInfo.stock isEqualToString:@"0"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"该菜品已售完！" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     if ([dishInfo.dishPrice isEqualToString:@""] || [dishInfo.dishPrice isEqualToString:@"0"]){
         shopCar=[ShopCar selectWithPrice:dishInfo.dishID withPrice:dishInfo.smallDishPrice];
         shopCar.dishPrice=dishInfo.smallDishPrice;

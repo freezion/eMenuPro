@@ -75,7 +75,7 @@
     shopCar.dishPrice=dishPriceText.text;
 
     shopCar.memo=dishMenuText.text;
-    if (dishMenuText.text==nil){
+    if ([dishMenuText.text isEqualToString:@""] || dishMenuText.text==nil){
         shopCar.memo=@"";
     }
     shopCar.sellCount=@"1";

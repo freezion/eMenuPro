@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>46923BA9-8D6C-403D-B224-5BC2F2EE4173</string>
+	<string>2EAA6692-FAC7-4EFC-9080-A5927149869A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>eMenuPro</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -18,7 +18,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CD083B77-1317-48EE-B352-F18861FB9C43</key>
-		<string>../../../../Desktop/eMenuPro</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/freezion/eMenuPro.git</string>
@@ -28,14 +28,6 @@
 	<string>CD083B77-1317-48EE-B352-F18861FB9C43</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CD083B77-1317-48EE-B352-F18861FB9C43</string>
-			<key>IDESourceControlWCCName</key>
-			<string>eMenuPro</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

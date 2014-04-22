@@ -57,7 +57,7 @@
     [uniquePath appendString:mydishInfo.imageName];
     img=[[UIImage alloc]initWithContentsOfFile:uniquePath];
     if (img==nil){
-        img=[UIImage imageNamed:@"nopic"];
+        img=[UIImage imageNamed:@"nopic.jpg"];
     }
     UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
     [imageView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -392,6 +392,11 @@
     UIView *darkView;
     DishInfo *mydishInfo =[DishInfo selectByDishID:dishID];
     ShopCar *shopCar=[[ShopCar alloc]init];
+    if ([dishInfo.stock isEqualToString:@"0"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"该菜品已售完！" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     if (partflag==1){
         shopCar=[ShopCar selectWithPrice:mydishInfo.dishID withPrice:mydishInfo.smallDishPrice];
         shopCar.dishPrice= mydishInfo.smallDishPrice;
