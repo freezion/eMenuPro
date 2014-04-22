@@ -84,7 +84,7 @@
     
     //创建了一个Label标签
     UILabel *dishIdLab = [[UILabel alloc] initWithFrame: CGRectMake(20, 8, 100, 50)];
-    dishIdLab.text=mydishInfo.dishID;
+    dishIdLab.text=mydishInfo.dishCode;
     dishIdLab.textColor=[UIColor whiteColor];
     dishIdLab.font=[UIFont systemFontOfSize:22];
     dishIdLab.backgroundColor=[UIColor clearColor];
